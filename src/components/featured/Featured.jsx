@@ -5,7 +5,23 @@ export default function Featured({type}) {
   return (
     <div className="featured">
         {type && (
-            <div className="category"></div>
+            <div className="category">
+                <span>{type === "movies" ? "Movies" : "Series"}</span>
+                <select name="genre" id="genre">
+                    <option>Genre</option>
+                    <option value="adventure">Adventure</option>
+                    <option value="comedy">Comedy</option>
+                    <option value="crime">Crime</option>
+                    <option value="award-winning">Award Winning</option>
+                    <option value="documentary">Documentary</option>
+                    <option value="romance">Romance</option>
+                    <option value="sci-fi">Sci-Fi</option>
+                    <option value="thriller">Thriller</option>
+                    <option value="animation">Animation</option>
+                    <option value="drama">Drama</option>
+                    <option value="sports">Sports</option>
+                </select>
+            </div>
         )}
       <img 
           src="/img/featured/slider1.webp"
