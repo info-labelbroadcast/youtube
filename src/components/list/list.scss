@@ -1,6 +1,7 @@
 .list {
     width: 100%;
-    margin-top: 15px;
+    margin-top: 35px;
+    margin-bottom: 10px;
 
     .listTitle {
         color: whitesmoke;
@@ -10,10 +11,36 @@
     }
 
     .wrapper {
+        position: relative;
+        .sliderArrow {
+            width: 36px;
+            height: 100%;
+            background-color: rgba(180, 180, 180, 0.5);
+            color:crimson;
+            position: absolute;
+            z-index: 99;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            cursor: pointer;
+
+            &.left {
+                left: 0;
+
+            }
+            &.right {
+                right: 0;
+            }
+
+        }
+
         .container {
-            margin-left: 50px;
+            margin-left: 40px;
             display: flex;
+            margin-top: 10px;
             width: max-content;
+            transform: translateX(0px);
+            transition: all 500ms ease;
         }
     }
 }
